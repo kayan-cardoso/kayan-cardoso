@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="Portfólio do Kayan, Engenheiro e Analista de dados conheça"> 
+    <meta name="description" content="Portfólio do Kayan">
+    <title>Meu Portfólio | Dados</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#inicio" class="logo">K<span>.</span> </a>
+
+        <nav class="navegacao" aria-label="Navegação pricipal">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="apresentacao" id="inicio">
+            <p class="etiquetas">PORTFÓLIO DE DADOS</p>
+
+            <h1>
+                Trasformando dados em 
+                <span>soluções.</span>
+            </h1>
+
+            <p class="descricao">
+                Olá! Sou Kayan, profissional da área de dados com foco
+                em análise e engenharia de dados. Desenvolvo soluções
+                utilizando Python, SQL e tecnologias para construção
+                de pipelines e processamento de dados.
+            </p>
+
+            <div class="acoes">
+                <a href="#projetos" class="botao botao-principal">
+                    Conheça meus projetos
+                </a>
+
+                <a href="#contato" class="botao botao-secundario">
+                    Entre em contato
+                </a>
+            </div>
+
+            <div class="indicador">
+                <span class="ponto"></span>
+                Análise de dados · Engenharia de dados
+            </div>
+        </section>
+
+        <section class="secao" id="sobre">
+            <p class="etiqueta"> 01 / SOBRE</p>
+            <h2>Sobre mim</h2>
+            <p>
+               Esta seção contará um pouco da minha trajetória
+               profissional e dos meus interesses na área de dados.
+            </p>
+        </section>
+
+        
+        <section class="secao" id="projetos">
+            <p class="etiqueta">02 / PROJETOS</p>
+
+            <h2>Projetos em destaque</h2>
+
+            <p class="introducao-projetos">
+                Projetos práticos envolvendo engenharia de dados,
+                processamento, análise e visualização de informações.
+            </p>
+
+            <div class="grade-projetos">
+
+                <article class="card-projeto">
+                    <div class="imagem-projeto">
+                        <img
+                            src="assets/images/tela-inicial.png"
+                            alt="Dashboard de cotações de criptomoedas em tempo real"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="projeto-topo">
+                        <span class="categoria">Engenharia de Dados</span>
+                        <span class="icone-projeto" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18"/>
+                                <path d="m7 14 4-4 4 3 5-7"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <h3>Dashboard de Cotações Cripto</h3>
+
+                    <p class="descricao-projeto">
+                        Pipeline de dados em tempo real que coleta cotações
+                        da API da Binance, transmite eventos pelo Apache Kafka
+                        e disponibiliza os dados no Apache Pinot para consulta
+                        e visualização em um dashboard Streamlit.
+                    </p>
+
+                    <div class="tecnologias-projeto">
+                        <span>Python</span>
+                        <span>Docker</span>
+                        <span>Apache Kafka</span>
+                        <span>Apache Pinot</span>
+                        <span>Streamlit</span>
+                    </div>
+
+                    <div class="links-projeto">
+                        <a
+                            href="https://github.com/kayan-cardoso/kafka_streaming_binance"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver código-fonte
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="#tecnologias">
+                            Tecnologias
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section class="secao" id="tecnologias">
+            <p class="etiqueta">03 / TECNOLOGIAS</p>
+            <h2>Ferramentas e tecnologias</h2>
+            <p>Python · SQL · Docker · Apache Kafka · Apache Pinot · Streamlit</p>
+        </section>
+
+        <section class="secao" id="contato">
+            <p class="etiqueta">04 / CONTATO</p>
+            <h2>Vamos nos conectar?</h2>
+            <p>Em breve, adicionarei aqui meus links profissionais.</p>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 Kayan · Portfólio de Dados</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+
+/* 1. Configurações gerais */
+
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #172033;
+    --cor-texto-secundario: #64748b;
+    --cor-destaque: #2563eb;
+    --cor-borda: #e8edf4;
+    --cor-fundo-suave: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.7;
+}
+
+/* 2. Cabeçalho */
+
+.cabecalho {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cor-destaque);
+}
+
+.navegacao {
+    display: flex;
+    gap: 28px;
+}
+
+.navegacao a {
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.navegacao a:hover {
+    color: var(--cor-destaque);
+}
+
+/* 3. Apresentação principal */
+
+.apresentacao {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 120px 24px 110px;
+}
+
+.etiqueta {
+    color: var(--cor-destaque);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.apresentacao h1 {
+    max-width: 750px;
+    font-size: clamp(42px, 7vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 26px;
+}
+
+.apresentacao h1 span {
+    color: var(--cor-destaque);
+}
+
+.descricao {
+    max-width: 650px;
+    color: var(--cor-texto-secundario);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* 4. Botões */
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao-principal {
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+}
+
+.botao-principal:hover {
+    background-color: #1d4ed8;
+}
+
+.botao-secundario {
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto);
+    background-color: #ffffff;
+}
+
+/* 5. Indicador profissional */
+
+.indicador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 38px;
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+}
+
+.ponto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #22c55e;
+}
+
+/* 6. Demais seções */
+
+.secao {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 24px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.secao h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+}
+
+.secao > p:last-child {
+    color: var(--cor-texto-secundario);
+}
+
+/* 7. Rodapé */
+
+.rodape {
+    padding: 28px 24px;
+    text-align: center;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+    background-color: var(--cor-fundo-suave);
+}
+
+/* 8. Adaptação para telas menores */
+
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 18px 20px;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .navegacao {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .navegacao a {
+        font-size: 12px;
+    }
+
+    .apresentacao {
+        padding: 80px 24px;
+    }
+
+    .apresentacao h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .secao {
+        padding: 55px 24px;
+    }
+}
+
+
+/* Projetos em destaque */
+
+.introducao-projetos {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 26px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+.card-projeto:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    transform: translateY(-4px);
+}
+
+.projeto-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.categoria {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: var(--cor-destaque);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.icone-projeto {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-destaque);
+}
+
+.icone-projeto svg {
+    width: 23px;
+    height: 23px;
+}
+
+.card-projeto h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.4px;
+}
+
+.descricao-projeto {
+    margin-bottom: 24px;
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.tecnologias-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 24px;
+}
+
+.tecnologias-projeto span {
+    padding: 5px 9px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    color: var(--cor-texto-secundario);
+    font-size: 11px;
+}
+
+.links-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.links-projeto a {
+    color: var(--cor-destaque);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.links-projeto a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 700px) {
+    .grade-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-projeto {
+        padding: 22px;
+    }
+}
+
+.imagem-projeto {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 22px;
+    overflow: hidden;
+    border-radius: 9px;
+    background-color: var(--cor-fundo-suave);
+}
+
+.imagem-projeto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
